@@ -2,18 +2,7 @@
   "name": "courier-app-components",
   "version": "0.1.13",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "bundle": "vue-cli-service build --target lib --inline-vue --name courier-app-components ./index.js --mode production",
-    "prepare": "npm run bundle",
-    "postinstall": "husky install || echo 'Skipping hooks install'",
-    "test": "vue-cli-service test:unit --coverage --maxWorkers=25%",
-    "test:snapshot": "npm run test -- -u --coverage",
-    "lint": "vue-cli-service lint --no-fix",
-    "lint:quiet": "eslint ./ --quiet",
-    "lint:fix": "vue-cli-service lint",
-    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "nexus:login": "npm login --registry=https://nexus.hermescloud.co.uk/repository/wfp-npm-private/"
+    "serve": "vue-cli-service serve"
   },
   "dependencies": {
     "cuid": "^2.1.8"
