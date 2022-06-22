@@ -27,6 +27,7 @@ jobs:
       - name: Some scripts
         run: |
           ls -la
+          find .
       
         
   js-lint:
