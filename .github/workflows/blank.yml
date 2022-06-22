@@ -15,13 +15,38 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+  some:
+    runs-on: ubuntu-latest
+    needs: [js-lint, build]
+    steps:
+      - name: Hellow from
+        run: echo "Hello from next steps"
+      - name: Download arifacts
+        uses: actions/download-artifact@v3.0.0
+      - name: Some scripts
+        run: |
+          ls -la
+      
+        
   js-lint:
     runs-on: ubuntu-latest
     steps:  
       - name: Echo cwd
-        run: pwd
+        run: | 
+          pwd
+          pwd
+          pwd
       - name: Echo ls
         run: ls -la
+      - name: Set date 
+        run: date > date.txt
+      - name: Upload arifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-without-markdown
+          path: |
+            date.txt
 
   # This workflow contains a single job called "build"
   build:
