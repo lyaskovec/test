@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:  
       - name: Echo cwd
-        run: cwd
+        run: pwd
       - name: Echo ls
         run: ls -la
 
